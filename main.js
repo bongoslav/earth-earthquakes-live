@@ -77,7 +77,7 @@ class App {
 
   createStarsMesh() {
     const starGeometry = new THREE.SphereGeometry(90, 64, 64);
-    const starTexture = new THREE.TextureLoader().load("./textures/stars.jpg");
+    const starTexture = new THREE.TextureLoader().load("./static/images/stars.jpg");
     const starMaterial = new THREE.MeshBasicMaterial({
       map: starTexture,
       side: THREE.BackSide,
