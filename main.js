@@ -68,7 +68,7 @@ class App {
   }
 
   createEarthMesh() {
-    const texture = new THREE.TextureLoader().load("./public/static/images/earth.jpg");
+    const texture = new THREE.TextureLoader().load("./textures/earth.jpg");
     const geometry = new THREE.SphereGeometry(EARTH_RADIUS, 64, 64);
     const material = new THREE.MeshBasicMaterial({ map: texture });
     const mesh = new THREE.Mesh(geometry, material);
