@@ -77,7 +77,9 @@ class App {
 
   createStarsMesh() {
     const starGeometry = new THREE.SphereGeometry(90, 64, 64);
-    const starTexture = new THREE.TextureLoader().load("./static/images/stars.jpg");
+    const starTexture = new THREE.TextureLoader().load(
+      "./static/images/stars.jpg"
+    );
     const starMaterial = new THREE.MeshBasicMaterial({
       map: starTexture,
       side: THREE.BackSide,
@@ -88,7 +90,7 @@ class App {
 
   createMarkerMesh(magn) {
     // create a marker mesh
-    const markerGeometry = new THREE.CircleGeometry(0.003, 32);
+    const markerGeometry = new THREE.CircleGeometry(0.001 * magn, 32);
     const markerMaterial = new THREE.MeshBasicMaterial({
       color: 0xff0000,
       transparent: true,
@@ -97,7 +99,7 @@ class App {
     const markerMesh = new THREE.Mesh(markerGeometry, markerMaterial);
 
     // add a pulse effect to the marker
-    const pulseGeometry = new THREE.CircleGeometry(0.007 * magn, 32);
+    const pulseGeometry = new THREE.CircleGeometry(0.004 * magn, 32);
     const pulseMaterial = new THREE.MeshBasicMaterial({
       color: 0xff0000,
       opacity: 0.2,
