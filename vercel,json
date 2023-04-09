@@ -1,5 +1,4 @@
 {
-  "version": 2,
   "builds": [
     {
       "src": "index.html",
@@ -15,7 +14,10 @@
       "dest": "/textures/$1"
     },
     {
-      "src": "/(.*)",
+      "handle": "filesystem"
+    },
+    {
+      "src": "/.*",
       "dest": "/index.html"
     }
   ]
